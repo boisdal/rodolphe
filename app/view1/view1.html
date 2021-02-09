@@ -1,7 +1,11 @@
-<div ng-controller="View1Ctrl as controller">
-    <videogular vg-theme="controller.config.theme" vg-responsive="true">
-        <vg-media vg-src="controller.config.sources" vg-responsive="true" vg-native-controls="controller.config.responsive">
-        </vg-media>
-        <vg-overlay-play></vg-overlay-play>
-    </videogular>
+<div ng-controller="View1Ctrl as controller" class="container-fluid" style="max-width: 100%">
+    <div class="row">
+        <div class="col-8">
+            <videogular vg-theme="controller.config.theme" vg-responsive="true">
+                <vg-media vg-src="controller.config.sources" vg-responsive="true" vg-native-controls="controller.config.responsive">
+                </vg-media>
+                <vg-overlay-play></vg-overlay-play>
+            </videogular>
+        </div>
+    </div>
 </div>
