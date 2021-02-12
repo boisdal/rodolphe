@@ -1,0 +1,18 @@
+<div class="container px-3" ng-controller="FileCtrl">
+    <div ng-repeat-start="file in $ctrl.inData.files" class="row">
+        <div class="p-1">
+            <i class="fa fa-angle-right" ng-click="unfold(file)" ng-show="!file.show&&file.isDir"></i>
+            <i class="fa fa-angle-down" ng-click="unfold(file)" ng-show="file.show&&file.isDir"></i>
+            <i class="fa fa-angle-left hide-icon" ng-show="!file.isDir"></i>
+        </div>
+        <div class="p-1">
+            <i ng-class="file.icon"></i>
+        </div>
+        <div class="p-1">
+            <h5 ng-click="file.sel = !file.sel" ng-class="{'selected': file.sel}">{{file.name}}</h5>
+        </div>
+    </div>
+    <div ng-repeat-end ng-show="file.isDir && file.show">
+        <file in-data="file"></file>
+    </div>
+</div>

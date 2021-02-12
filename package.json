@@ -10,7 +10,13 @@
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
     "angular-sanitize": "^1.8.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "file-system": "^2.2.2",
     "html5-boilerplate": "0.0.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1",
     "videogular": "^2.2.1",
     "videogular-angulartics": "^1.4.4",
     "videogular-buffering": "^1.4.4",
@@ -30,7 +36,8 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2",
-    "protractor": "^5.4.1"
+    "protractor": "^5.4.1",
+    "socket.io": "^3.1.1"
   },
   "scripts": {
     "postinstall": "npm run copy-libs",

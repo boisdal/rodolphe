@@ -1,0 +1,36 @@
+<div ng-controller="JukeboxCtrl as controller" class="container-fluid p-2" style="max-width: 100%">
+    <div class="row justify-content-left">
+        <div class="container col-8 align-content-start" ng-init="tabShow = 'local'">
+            <div id="search section" class="container">
+                <div class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" ng-class="{'active': tabShow=='local'}" ng-click="tabShow = 'local'">
+                            <i class="fa fa-folder-open"></i> Local
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-class="{'active': tabShow=='youtube'}" ng-click="tabShow = 'youtube'">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </li>
+                </div>
+                <div ng-if="tabShow == 'local'">
+                    <file in-data="directory"></file>
+                    <button class="btn btn-outline-primary" ng-click="addSelected()">Add it !!</button>
+                </div>
+                <div ng-if="tabShow == 'youtube'">
+                    This is the YouTube tab
+                </div>
+            </div>
+            <hr>
+            <div id="playlist" class="container"></div>
+        </div>
+        <div class="col-4">
+            <videogular vg-theme="controller.config.theme.url" vg-responsive="true">
+                <vg-media vg-src="controller.config.sources" vg-responsive="true" vg-native-controls="controller.config.responsive">
+                </vg-media>
+                <vg-overlay-play></vg-overlay-play>
+            </videogular>
+        </div>
+    </div>
+</div>
